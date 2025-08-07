@@ -1,0 +1,22 @@
+global _start
+
+section .data
+sum db 0
+
+section .text
+_start:
+mov eax, 8
+mov edx, eax
+add eax, ebx
+add eax, 48
+mov [sum], eax
+
+mov edx, 1
+mov ecx, sum
+mov eax, 4
+mov ebx, 1
+int 80h
+
+mov eax, 1
+xor ebx, ebx
+int 80h
