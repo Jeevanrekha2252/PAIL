@@ -6,7 +6,7 @@ sum db 0
 section .text
 _start:
 mov eax, 8
-mov edx, eax
+mov ebx, 1
 add eax, ebx
 add eax, 48
 mov [sum], eax
